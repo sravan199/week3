@@ -1,0 +1,34 @@
+Undefined:
+	It means a variable has been declared but has not yet been assigned a value
+
+var a;
+console.log(a);                      	//undefined
+console.log(typeof a);  		// undefined
+
+here type is also undefined.
+
+Null:
+	It can be assigned to a variable to represent no value. It is an assignment value.
+
+var b = null;
+console.log(b); 		//null
+console.log(typeof b); 		//object
+
+Here the type is object.
+
+
+Undeclared:
+	If a variable is not declared then the browser throws error.
+
+console.log(a);		//is not declared
+console.log(typeof a); 		//undefined	
+
+Here the type is undefined
+
+
+NaN:
+	It represents “Not-a-Number” value. This property indicates that a value is not a legal number.
+
+var c = NaN;
+console.log(c); 		//NaN
+console.log(typeof c); 		//number

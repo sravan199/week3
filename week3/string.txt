@@ -1,0 +1,111 @@
+String methods :
+
+String Methods and Properties:
+	Primitive values, like "Any string value", cannot have properties or methods (because they are not objects).
+But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing
+methods and properties.
+
+String Length:
+	The length property returns the length of a string:
+
+Finding a String in a String:
+		The indexOf() method returns the index of the first occurrence of a specified text in a string.The lastIndexOf() method returns the
+index of the last occurrence of a specified text in a string:
+	Both indexOf(), and lastIndexOf() return -1 if the text is not found and Both methods accept a second parameter as the starting position for the search
+
+Searching for a String in a String:
+	The search() method searches a string for a specified value and returns the position of the match.The search() method cannot take a second start 
+position argument.
+
+....................................................................................................................................................................................................................................................................
+
+Extracting String Parts:
+
+	slice(start, end)
+	substring(start, end)
+	substr(start, length)
+	The slice() Method
+	
+slice() extracts a part of a string and returns the extracted part in a new string.The method takes 2 parameters: the starting index , and the ending index .
+            If a parameter is negative, the position is counted from the end of the string.If you omit the second parameter, the method will slice out the rest of the
+string.
+
+substring() :
+substring() is similar to slice().
+The difference is that substring() cannot accept negative indexes.If you omit the second parameter, substring() will slice out the rest of the string.
+
+substr():
+substr() is similar to slice().The difference is that the second parameter specifies the length of the extracted part.
+if the first parameter is negative, the position counts from the end of the string.
+
+....................................................................................................................................................................................................................................................................
+
+Replacing String Content:
+
+The replace() method replaces a specified value with another value in a string:
+The replace() method does not change the string it is called on. It returns a new string.
+By default, the replace() function replaces only the first match.
+By default, the replace() function is case sensitive.
+
+To replace case insensitive, use a regular expression with an /i flag.
+
+Example
+	str = "Please visit Microsoft!";	
+	var n = str.replace(/MICROSOFT/i, "google");
+
+To replace all matches, use a regular expression with a /g flag (global match):
+
+Example
+	str = "Please visit Microsoft and Microsoft!";
+	var n = str.replace(/Microsoft/g, "google");
+
+....................................................................................................................................................................................................................................................................
+
+Converting to Upper and Lower Case
+
+	A string is converted to upper case with toUpperCase().A string  is text1 converted to lowertoLowerCase().
+
+concat():
+	concat() joins two or more strings.The concat() method can be used instead of the plus operator.
+
+All string methods return a new string. They don't modify the original string.
+Formally said: Strings are immutable: Strings cannot be changed, only replaced.
+
+String.trim():
+	String.trim() removes whitespace from both sides of a string.String.trim() is not supported in Internet Explorer 8 or lower.
+
+String.replace:
+
+The charAt() Method
+		The charAt() method returns the character at a specified index (position) in a string:
+str.charCodeAt(index):
+	The method returns a UTF-16 code (an integer between 0 and 65535). 
+
+
+property access [ ] on strings:
+
+	var str = "HELLO WORLD";
+	str[0];                   // returns H
+
+It makes strings look like arrays                  (but they are not)
+If no character is found, [ ] returns undefined, while charAt() returns an empty string.
+It is read only. str[0] = "A" gives no error   (but does not work!)
+
+Example:
+
+var str = "HELLO WORLD";
+str[0] = "A";             // Gives no error, but does not work
+str[0];                   // returns H
+If you want to work with a string as an array, you can convert it to an array.
+
+
+Converting a String to an Array:
+		A string can be converted to an array with the split() method:
+
+txt.split(",");          // Split on commas
+txt.split(" ");          // Split on spaces
+txt.split("");           // Split in characters
+
+If the separator is omitted, the returned array will contain the whole string in index [0].If the separator is "", the returned array will be an array of single characters.
+
+

@@ -1,0 +1,26 @@
+forEach :
+              forEach is an Array method that we can use to execute a function on each element in an array. 
+It can only be used on Arrays, Maps, and Sets.It can not be used on other objects and strings.
+syntax :
+ array_name.forEach(function(element,index,array){
+//statements
+});
+.............................................................................................................................................................................................................................
+for...of :
+             for...of is used to iterate over the values in an iterable like strings,arrays and iterable objects.To make objects iterable we need to add a method to the object named Symbol.iterator (a special built-in symbol ).
+
+When for..of starts, it calls that method (or errors if not found).
+The method must return an iterator – an object with the method next.
+When for..of wants the next value, it calls next() on that object.
+The result of next() must have the form {done: Boolean, value: any}, where done=true means that the iteration is finished, otherwise value must be the new value.
+syntax :
+for(let temp of array){
+//statements
+}
+.............................................................................................................................................................................................................................
+for...in:
+            for…in is used to iterate over the properties of an object (the object keys).We can also use for…in to iterate over the index values of an iterable like an array or a string.
+syntax :
+for(let temp in object){
+//statements
+}

@@ -1,0 +1,12 @@
+setTimeout()
+Calls a function or executes a code snippet after specified delay.
+setInterval()
+Calls a function or executes a code snippet repeatedly, with a fixed time delay between each call to that function.
+setImmediate()
+Calls a function immediately after the browser has completed other operations, such as events and display updates.
+clearTimeout()
+Clears the delay set by setTimeout().
+clearInterval()
+Cancels repeated action which was set up using setInterval().
+clearImmediate()
+Cancels the immediate actions, just like clearTimeout() for setTimeout().
