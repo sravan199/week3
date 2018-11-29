@@ -1,0 +1,26 @@
+
+<% include partials/header %>
+
+<h1> <%= temp %></h1>
+<br> 
+<form  method="POST" action="/user/add">
+    <label>User Name</label>
+    <br>
+    <input type="text" name="name">
+    <br>
+        <label>Password</label>
+        <br>
+        <input type="text" name="password">
+        <br>
+    <input type="submit" value="submit">
+</form>
+<br>
+
+<h2>Registered List</h2>
+<ul>
+<% docs.forEach(function(user){ %>
+<li> <%=user.name %></li>
+<%  }); %>
+</ul>
+<h2><a href="#"  class="deleteUser">Delete</a></h2>
+<% include partials/footer %>
