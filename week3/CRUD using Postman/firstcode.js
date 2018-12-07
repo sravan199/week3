@@ -1,11 +1,4 @@
-// let http=require('http');
 
-
-// var server=http.createServer((req,res)=>{
-// res.end('hello 2.0');
-
-// });
-// server.listen(400,'localhost',()=>{console.log('400 port started')});
 let express =require('express');
 let app=express();
 
