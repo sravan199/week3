@@ -1,0 +1,18 @@
+SOAP and REST :
+ 		They can't be compared directly, since the first is a protocol (or at least tries to be) and the second is an architectural style.The main
+difference between SOAP and REST is the degree of coupling between client and server implementations. A SOAP client works like a custom desktop application,
+tightly coupled to the server. There's a rigid contract between client and server, and everything is expected to break if either side changes anything. You need
+constant updates following any change, but it's easier to ascertain if the contract is being followed.
+
+	A REST client is more like a browser. It's a generic client that knows how to use a protocol and standardized methods, and an application has to fit 
+inside that. You don't violate the protocol standards by creating extra methods, you leverage on the standard methods and create the actions with them on your
+ media type. If done right, there's less coupling, and changes can be dealt with more gracefully. A client is supposed to enter a REST service with zero knowledge
+ of the API, except for the entry point and the media type.
+	 In SOAP, the client needs previous knowledge on everything it will be using, or it won't even begin the interaction. 
+Additionally, a REST client can be extended by code-on-demand supplied by the server itself, the classical example being JavaScript code used to drive the 
+interaction with another service on the client-side.
+
+	REST is protocol independent. It's not coupled to HTTP. Pretty much like you can follow an ftp link on a website, a REST application can use any
+ protocol for which there is a standardized URI scheme.EST is not a mapping of CRUD to HTTP methods.REST is as standardized as the parts you're using. 
+Security and authentication in HTTP are standardized, so that's what you use when doing REST over HTTP.This means that a client only knows the entry point 
+URI and the resources are supposed to return links the client should follow. REST is the architectural style of the web itself.

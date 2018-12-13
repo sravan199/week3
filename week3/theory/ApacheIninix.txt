@@ -1,0 +1,24 @@
+
+NGINX -
+	NGINX can handle at least 10,000 simultaneous client connections on a single server. NGINX uses an asynchronous, event-driven architecture to
+ handle these massive amounts of connections. This architecture makes handling high and fluctuating loads much more predictable in terms of RAM usage, 
+CPU usage, and latency.
+
+Map of NGINX Event-Driven ArchitectureNGINX’s event-driven architecture helps predict RAM and CPU usage, as well as latency, for high/fluctuating loads.
+The main difference between NGINX and Apache, in terms of the event models, is that NGINX does not set up extra worker processes per connection.
+ In most cases, the recommended NGINX configuration is running one worker process per CPU, maximizing the hardware’s efficiency.
+
+NGINX also has a rich set of features and can perform various server roles:
+
+A reverse proxy server for the HTTP, HTTPS, SMTP, POP3, and IMAP protocol
+A load balancer and an HTTP cache
+A frontend proxy for Apache and other web servers, combining the flexibility of Apache with the good static content performance of NGINX
+NGINX supports FastCGI and SCGI handlers for serving dynamic content scripts such as PHP and Python. NGINX (Linux, MySQL, PHP).
+
+   Apache   - 
+		 It does not scale well with many concurrent connections, as it consumes a lot of RAM and might  even 	refuseconnections at high loads.
+ Smaller sites won’t notice this, but larger sites likely will.worker model: This creates a single control process that is responsible for launching child processes.
+ Each child process then creates a fixed number of threads, as well as a listener thread. The listener thread listens for connections and passes them to a thread for 
+processing when they arrive. Though this model scales much better than the pre-fork method, it can still run into scaling issues for very high-traffic sites, due to
+ the single control process bottleneck.event model: This is similar to the worker model, but it creates one listener thread which listens for connections and passes
+ them to a worker thread for processing.
