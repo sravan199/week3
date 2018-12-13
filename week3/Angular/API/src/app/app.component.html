@@ -1,0 +1,25 @@
+<div class="gallery">
+  <div class="thumb" *ngFor="let thumb of galleryData" (click)="getFullDetialsOfMovie(thumb.id)">
+    <div class="title">
+      <span>{{ thumb['title']}}</span>
+      <p class="popiularity"> &#10084; {{ thumb['vote_average']}}</p>
+      <span class="overview">{{ thumb['overview']}}</span>
+    </div>
+    <img [src]="thumb['backdrop_path']" alt="thumb['title']" id="r">
+  </div>
+</div>
+
+<div class="overlay" *ngIf="fullMovieDetials">
+    <img [src]="fullMovieDetials.backdrop_path" alt="thumb['title']" id="main"/> 
+  <div class="modal">
+  <span style="color:rgb(203, 236, 53);font-size:22px;"><strong>{{details.original_title}}</strong></span><br><br>
+      Genres :- {{details.genres[0].name}} <br>
+      Release date :- {{details.release_date}}<br>
+      Movie Status :- {{details.status}}<br>
+      Runtime :- {{details.runtime}} min<br><br>
+      <strong> tagline :- {{details.tagline}}</strong><br><br>
+      Overview :-  {{details.overview}}<br><br><br>
+
+     <button (click)="setFullDetails()" id="home">Home</button>
+
+  </div>
